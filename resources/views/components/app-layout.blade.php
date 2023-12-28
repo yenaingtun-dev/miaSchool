@@ -27,7 +27,7 @@
                     </a>
                 </div>
 
-                <div class="md:flex md:items-center" x-data="{ slideOut: false }" @keydown.window.escape="slideOut = false">
+                <div class="md:flex md:items-center" x-data="{ showDropdown: false }" >
                     <nav aria-label="Global" class="hidden lg:block">
                         <ul class="flex items-center gap-6 text-sm">
                             <li>
@@ -91,9 +91,9 @@
                         </ul>
                     </nav>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex flex-col items-center gap-4">
                         <div class="block lg:hidden">
-                            <button @click="slideOut = !slideOut"
+                            <button @click="showDropdown = !showDropdown"
                                 class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -101,13 +101,33 @@
                                 </svg>
                             </button>
                         </div>
-                        <div x-cloak x-transition.opacity x-show="slideOut" class="fixed inset-0 bg-black/50"></div>
+
+                        <div x-cloak x-show="showDropdown"  @click.away="showDropdown = false" class="w-[90%] absolute right-3 z-10 mt-14 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                            <div class="py-1" role="none">
+                              <a href="{{ route('home') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Home</a>
+                              <a href="{{ route('about') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">About</a>
+                            </div>
+                            <div class="py-1" role="none">
+                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Overview</a>
+                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Our Facilities</a>
+                            </div>
+                            <div class="py-1" role="none">
+                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Our Mission</a>
+                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Contact Us</a>
+                            </div>
+                            <div class="py-1" role="none">
+                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-6">Delete</a>
+                            </div>
+                          </div>
+
+                        {{-- <div x-cloak x-transition.opacity x-show="slideOut" class="fixed inset-0 bg-black/50"></div>
 
                         <div x-cloak x-show="slideOut" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
                             x-transition:leave="transition ease-in duration-300"
                             x-transition:leave-start="translate-x-0" x-transition:leave-end="translate-x-full"
-                            @click.away="slideOut = false" class="fixed inset-y-0 right-0 z-50 w-full bg-white overscroll-contain  ">
+                            @click.away="slideOut = false"
+                            class="fixed inset-y-0 right-0 z-50 w-full bg-white overscroll-contain  ">
                             <div class="h-10 flex justify-between items-center pr-4 w-full bg-blue-300">
                                 <h3 class="ml-3 text-3xl text-white font-semibold">MIA</h3>
                                 <button @click="slideOut = false">
@@ -122,7 +142,7 @@
                                 </li>
                                 <li class="mr-3">
                                     <a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-4"
-                                        href="{{ route("about") }}">About
+                                        href="{{ route('about') }}">About
                                     </a>
                                 </li>
                                 <li class="mr-3">
@@ -147,7 +167,7 @@
                                 </li>
                             </ul>
 
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -161,7 +181,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     {{ $scripts ?? '' }}
 </body>
