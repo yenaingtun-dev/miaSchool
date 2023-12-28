@@ -69,7 +69,7 @@
                     Lorem ipsum dolor sitsit amet consectetur adipisicing elit. amet consectetur adipisicing elit.
                 </p>
             </div>
-            <div id="owl-demo-2" class="owl-carousel owl-theme">
+            <div id="owl-demo-2" class="owl-carousel owl-theme mt-3">
                 {{-- <div class="flex flex-wrap mt-4">
                     <div class="xl:w-1/4 md:w-1/2 p-2">
                         <div class="bg-indigo-400 p-6 rounded-lg text-center text-white">
@@ -111,8 +111,22 @@
                     </div>
                 </div> --}}
                 <div class="thumbnail item">
-                    <div class="p-3 w-full">
-                        <div class="bg-indigo-400 p-10 h-[22rem] rounded-lg text-center text-white">
+                    <div class="w-full">
+                        <div class="bg-indigo-400 p-5 h-[22rem] rounded-lg text-center text-white">
+                            <div class="circular-image mx-auto">
+                                <img class=""
+                                    src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-music-icon-image_1344442.jpg"
+                                    alt="content">
+                            </div>
+                            <h2 class="text-2xl font-medium mb-4">Music new</h2>
+                            <p class="leading-relaxed ">Fingerstache flexitarian street art 8-bit waistcoat.
+                                Distillery hexagon disrupt edison bulbche.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnail item">
+                    <div class="w-full">
+                        <div class="bg-indigo-400 p-5 h-[22rem] rounded-lg text-center text-white">
                             <div class="circular-image mx-auto">
                                 <img class=""
                                     src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-music-icon-image_1344442.jpg"
@@ -125,22 +139,8 @@
                     </div>
                 </div>
                 <div class="thumbnail item">
-                    <div class="p-3 w-full">
-                        <div class="bg-indigo-400 p-10 h-[22rem] rounded-lg text-center text-white">
-                            <div class="circular-image mx-auto">
-                                <img class=""
-                                    src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-music-icon-image_1344442.jpg"
-                                    alt="content">
-                            </div>
-                            <h2 class="text-2xl font-medium mb-4">Music new</h2>
-                            <p class="leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                                Distillery hexagon disrupt edison bulbche.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="thumbnail item">
-                    <div class="p-3 w-full">
-                        <div class="bg-indigo-400 p-10 h-[22rem] rounded-lg text-center text-white">
+                    <div class="w-full">
+                        <div class="bg-indigo-400 p-5 h-[22rem] rounded-lg text-center text-white">
                             <div class="circular-image mx-auto">
                                 <img class=""
                                     src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-music-icon-image_1344442.jpg"
@@ -153,8 +153,8 @@
                     </div>
                 </div>
                 <div class="thumbnail item">
-                    <div class="p-3 w-full">
-                        <div class="bg-indigo-400 p-10 h-[22rem] rounded-lg text-center text-white">
+                    <div class="w-full">
+                        <div class="bg-indigo-400 p-5 h-[22rem] rounded-lg text-center text-white">
                             <div class="circular-image mx-auto">
                                 <img class=""
                                     src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-music-icon-image_1344442.jpg"
@@ -167,8 +167,8 @@
                     </div>
                 </div>
                 <div class="thumbnail item">
-                    <div class="p-3 w-full">
-                        <div class="bg-indigo-400 p-10 h-[22rem] rounded-lg text-center text-white">
+                    <div class="w-full">
+                        <div class="bg-indigo-400 p-5 h-[22rem] rounded-lg text-center text-white">
                             <div class="circular-image mx-auto">
                                 <img class=""
                                     src="https://png.pngtree.com/element_our/20190601/ourmid/pngtree-music-icon-image_1344442.jpg"
@@ -411,10 +411,10 @@
             </div>
             <div
                 class="flex-grow flex flex-wrap justify-between md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                <div class="lg:w-1/4 md:w-[45%] w-full px-4">
                     <h2 class="font-medium mb-3 text-xl uppercase">Qucik Navigation</h2>
-                    <div class="flex  justify-center space-x-4">
-                        <nav class="list-none mb-10 space-y-2">
+                    <div class="flex flex-col justify-center space-x-0 lg:flex-row lg:space-x-4">
+                        <nav class="list-none lg:mb-10 space-y-2">
                             <li>
                                 <a class="cursor-pointer hover:text-gray-800">About</a>
                             </li>
@@ -425,7 +425,7 @@
                                 <a class="cursor-pointer hover:text-gray-800">Contact Us</a>
                             </li>
                         </nav>
-                        <nav class="list-none mb-10 space-y-2">
+                        <nav class="list-none mt-2 lg:mt-0 mb-10 space-y-2">
                             <li>
                                 <a class="cursor-pointer hover:text-gray-800">Overview</a>
                             </li>
