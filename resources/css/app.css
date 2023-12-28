@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Equal Heights for OwlCarousel 2 */
+.owl-carousel {
+	.owl-stage {
+		display: flex;
+	}
+	.owl-item {
+		display: flex;
+		flex: 1 0 auto;
+	}
+	.thumbnail {
+		display: flex;
+		flex-direction: column;
+		margin: 0 15px;
+		.caption {
+			display: flex;
+			flex: 1 0 auto;
+			flex-direction: column;
+			.flex-text {
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
+.circular-image {
+    width: 100px; /* Set the desired width */
+    height: 100px; /* Set the desired height */
+    border-radius: 50%;
+    overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.circular-image img {
+    width: 100%; /* Make the image fill the circular container */
+    height: 100%; /* Make the image fill the circular container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.owl-prev {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    margin-left: -20px;
+    display: block !important;
+    border:0px solid black;
+}
+
+.owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    right: -25px;
+    display: block !important;
+    border:0px solid black;
+}
+.owl-prev i, .owl-next i {
+    transform : scale(2,2);
+    color: indigo;
+}
+
+.owl-prev i {
+    margin-left: -40px;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+    background: transparent !important;
+}
+
