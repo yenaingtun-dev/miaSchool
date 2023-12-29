@@ -85,7 +85,7 @@
                     @endphp
 
                     <div class="flex">
-                        <div class="flex gap-3">
+                        <div class="flex gap-1 sm:gap-3">
                             @foreach ($members as $member)
                                 <div>
                                     <input type="checkbox" name="isMemeber[]" value="{{ $member }}"
@@ -112,9 +112,9 @@
                 </div>
 
                 <div class="flex flex-wrap items-center justify-between gap-3">
-                    <div class="text-gray-500">Are you a Adult or Child?</div>
+                    <div class="text-gray-500">Are you a Adult?</div>
 
-                    <div class="flex gap-3">
+                    <div class="flex gap-1 sm:gap-3">
                         <div>
                             <input type="radio" name="isAdult" value="true" id="adult" class="peer hidden"
                                 {{ old('isAdult') == 'true' ? 'checked' : '' }} />
