@@ -62,7 +62,7 @@
 
                             <li>
                                 <a class="text-gray-500 font-semibold transition hover:text-indigo-500/75"
-                                    href="/"> Contact Us </a>
+                                    href="{{ route('contact-form.index') }}"> Contact Us </a>
                             </li>
 
                             <li x-data="{ showDropdown: false }">
@@ -113,7 +113,7 @@
                             </div>
                             <div class="py-1" role="none">
                               <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-4">Our Mission</a>
-                              <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Contact Us</a>
+                              <a href="{{ route('contact-form.index') }}" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-5">Contact Us</a>
                             </div>
                             <div class="py-1" role="none">
                               <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-6">Delete</a>
